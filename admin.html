@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Admin</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script type="module" src="./js/main.js"></script>
+  <link rel="stylesheet" href="./css/propiedades-admin.css">
+</head>
+<body>
+  <section id="loginSection">
+    <h2>Ingreso</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required />
+      <input type="password" id="loginPassword" placeholder="Contraseña" required />
+      <button type="submit">Ingresar</button>
+    </form>
+    <p id="loginStatus"></p>
+  </section>
+
+  <div id="userMenu" style="display:none;">
+    <span id="userEmail" style="cursor:pointer;"></span>
+    <div id="userDropdown" style="display:none;">
+      <a href="#formPropiedad">Cargar propiedad</a><br>
+      <a href="#" id="verPropiedadesBtn">Editar propiedades</a><br>
+      <a href="#" id="logoutLink">Cerrar sesión</a>
+    </div>
+  </div>
+
+  <section class="form-contacto">
+    <h2>Cargar Propiedad</h2>
+    <form id="formPropiedad">
+      <input type="text" id="title" placeholder="Título" required />
+      <input type="text" id="price" placeholder="Precio" required />
+      <input type="text" id="location" placeholder="Ubicación" required />
+      <input type="number" id="bedrooms" placeholder="Dormitorios" required />
+      <input type="number" id="bathrooms" placeholder="Baños" required />
+      <input type="text" id="image" placeholder="URL de imagen" required />
+      <label><input type="checkbox" id="sale" /> Venta</label>
+      <label><input type="checkbox" id="rent" /> Alquiler</label>
+      <button type="submit">Guardar propiedad</button>
+    </form>
+  </section>
+
+  <section id="propiedadesAdmin" style="display:none;">
+    <h2>Propiedades cargadas</h2>
+    <div id="listaPropiedades"></div>
+  </section>
+</body>
+</html>

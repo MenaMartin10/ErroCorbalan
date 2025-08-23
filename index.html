@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erro Corbalán Propiedades</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+
+<body>
+   <header>
+  <div class="logo"><a href="index.html"><img src="./images/logoSolo.png" alt="Erro Corbalán Propiedades"></a></div>
+  <div><img id="erroCorbalan" src="./images/erroc.png" alt=""></div>
+  <nav>
+    <a href="#section1">INICIO</a>
+    <a href="#section2">PROPIEDADES</a>
+    <a href="#section3">QUIENES SOMOS</a>
+    <a href="#section4">CONTACTO</a>
+  </nav>
+  <div id="userMenu" class="user-menu" style="display:none;">
+  <span id="userEmail" class="user-email">👤 Usuario</span>
+  <div id="userDropdown" class="dropdown-content" style="display:none;">
+    <a href="#formPropiedad">Cargar propiedades</a>
+    <a href="#" id="verPropiedadesBtn">Editar propiedades</a>
+    <a href="#" id="logoutLink">Cerrar sesión</a>
+  </div>
+</div>
+</header>
+
+   <div class="dot-navigation">
+  <a href="#section1" class="dot active"></a>
+  <a href="#section2" class="dot"></a>
+  <a href="#section3" class="dot"></a>
+  <a href="#section4" class="dot"></a>
+</div>
+
+    <section id="section1" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Encontramos la propiedad que necesitas, en el lugar que queres</h1>
+            <div class="hero-buttons">
+                <button id="comprar">Quiero comprar</button>
+                <button id="alquilar">Quiero alquilar</button>
+            </div>
+            <form class="search-form">
+                <input type="text" placeholder="¿Dónde quieres mudarte?" />
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <img src="./images/image1.jpg" alt="Imagen Propiedad 1" class="slideshow-image active">
+        <img src="./images/image2.jpg" alt="Imagen Propiedad 2" class="slideshow-image">
+        <img src="./images/image3.jpg" alt="Imagen Propiedad 3" class="slideshow-image">
+        <img src="./images/image4.jpg" alt="Imagen Propiedad 4" class="slideshow-image">
+    </section>
+
+    <div><h1>PROPIEDADES</h1></div>
+    <section id="section2" class="grid"></section>
+    
+    <section id="section3" class="texto-quienes">
+        <div><h1 data-aos="fade-up">QUIENES SOMOS</h1></div>
+        <div data-aos="fade-up">
+            <p id="familiar">Somos una empresa familiar donde cada propiedad cuenta una historia única. Nos dedicamos a ofrecer soluciones inmobiliarias personalizadas y de calidad superior. Con más de 13 años de experienca, somos expertos en la compra, venta y alquiler de propiedades residenciales y comerciales. Nuestro compromiso es superar tus expectativas, proporcionando un servicio excepcional basado en integridad, profesionalismo y atención al detalle. Ya sea que estés buscando tu nuevo hogar o deseando invertir en bienes raíces, nuestro equipo dedicado está aquí para guiar cada paso del camino.</p>
+        </div>
+            <div class="profiles-container">
+                <div class="image-perfil-container">
+                    <figure class="image push">
+                        <img class="image-perfil" src="./images/CarinaIMG.jpg" alt="Carina Erro">
+                        <figcaption>
+                            <h3>Carina Erro</h3>
+                            <p id="descripcion">Experta en el sector con más de 13 años de experiencia.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="image-perfil-container">
+                    <figure class="image push">
+                        <img class="image-perfil" src="./images/VeroIMG.jpg" alt="">
+                        <figcaption>
+                            <h3>Verónica Erro</h3>
+                            <p id="descripcion">Experta en el sector con más de 13 años de experiencia.</p>
+                        </figcaption>
+                    </figure>
+            </div>
+        </div> 
+    </section>
+    
+   
+    <footer>
+        <div class="contenedor-footer">
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13138.669336215387!2d-58.92617309005483!3d-34.42942676403278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca70a6e4e74b1%3A0x21d84339a1b5d0f2!2sLa%20Lonja%2C%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses!2s!4v1693300000000!5m2!1ses!2s" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="datos">
+                <p><i class="fas fa-phone"></i> Teléfono: <p>Carina: 011-6717-9961</p><p>Verónica: 011-5735-4645</p></p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:mail@gmail.com">errocorbalan@gmail.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Ubicación: La Lonja, Pilar, Buenos Aires</p>
+                <div class="redes">
+                <a href="https://www.instagram.com/errocorbalan"><p><i class="fab fa-instagram"></i></p></a>
+                <a href="https://www.facebook.com/profile.php?id=100047356160543"><p><i class="fab fa-facebook"></i></p></a>
+                </div>
+            </div>
+        </div>
+
+        <section id="section4" class="form-contacto"> 
+                <h2>Contacto</h2>
+                <form id="contactForm">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="email" name="email" placeholder="Tu email" required>
+                    <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+                <p id="formMensaje"></p>
+        </section>
+    </footer>
+
+    <section class="form-contacto">
+          <h2>Cargar Propiedad</h2>
+            <form id="formPropiedad">
+                <input type="text" id="title" placeholder="Título" required />
+                <input type="text" id="price" placeholder="Precio" required />
+                <input type="text" id="location" placeholder="Ubicación" required />
+                <input type="number" id="bedrooms" placeholder="Dormitorios" required />
+                <input type="number" id="bathrooms" placeholder="Baños" required />
+                <input type="text" id="image" placeholder="URL de imagen" required />
+                <label><input type="checkbox" id="sale" /> Venta</label>
+                <label><input type="checkbox" id="rent" /> Alquiler</label>
+                <button type="submit">Guardar propiedad</button>
+            </form>
+    </section>
+
+
+    <script>AOS.init();</script>
+    <script type="module" src="/js/main.js"></script>
+    <p id="copy">© 2025 Erro Corbalán Propiedades. Desarrollado por Mena Web Developer. Todos los derechos reservados.</p> 
+</body>
+</html>
