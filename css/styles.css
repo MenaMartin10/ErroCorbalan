@@ -10,18 +10,20 @@
         overflow-x: hidden;
     }
 
-    header {
-        position: fixed;
-        display: flex;
-        justify-content: space-around;
-        gap: 250px;
-        align-items: center;
-        background-color: #780e18;
-        border-bottom: 1px solid #ccc;
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
-    }
+   header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #780e18;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 15px;
+  box-sizing: border-box; /* ✅ que no se desborde */
+}
 
     header .logo img {
         width: 110px;
@@ -665,42 +667,46 @@
   scrollbar-width: none;  /* quita el scrollbar pero mantiene el scroll */
 }
 
-  #erroCorbalan {
-    background-color: #780e18;
-    position: relative;
-    top: -25px;
-    left: 25%;
-    width: 200px;
-    height: 90px;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: top 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+#erroCorbalan {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* ✅ centrado horizontal */
+  width: 300px;
+  height: auto;
+  margin: 10px auto;
+  border-radius: 10px;
+  background-color: #780e18;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, width 0.3s ease;
 }
 
-header {
-    display: block;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #780e18;
-    border-bottom: 1px solid #ccc;
-    margin: -10px;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    transition: all 0.3s ease-in-out;
-    overflow: hidden;
+/* Cuando hace scroll */
+#erroCorbalan.shrink-logo {
+  transform: translateX(-50%) scale(0.85); /* ✅ achicar */
+  box-shadow: none;
 }
 
-header nav{
-    font-size: x-small;
+
+ header {
+    flex-direction: column;   /* logo y nav en columna */
     justify-content: center;
-    margin: 15px;
+    align-items: center;
+    margin: 0;                /* ✅ sacar el -10px */
+    width: 100%;              /* ✅ ocupar todo */
+  }
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    font-size: xx-small;
 }
 
-header .logo img {
-    visibility: hidden;
-}
+ header .logo img {
+    display: none !important; /* nunca en celular */
+  }
 
 .hero-title {
     position: relative;
@@ -808,10 +814,6 @@ header {
 header .logo img {
   transition: opacity 1s ease;
 }
-}
-
-#erroCorbalan {
-  transition: all 1s ease-in-out;
 }
 
 .form-upload {

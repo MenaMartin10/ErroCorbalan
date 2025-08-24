@@ -524,25 +524,31 @@ document.addEventListener("scroll", function () {
   // Header padding
   header.style.padding = scrollY > 80 ? "5px 20px" : "15px 20px";
 
-  // Mostrar u ocultar logo SOLO en mobile
-  if (logo) {
-    logo.style.display = isMobile && scrollY > 80 ? "none" : "block";
+if (logo) {
+  if (isMobile) {
+    // En celular: nunca mostrar
+    logo.style.display = "none";
+  } else {
+    // En desktop: siempre visible
+    logo.style.display = "block";
   }
+}
 
-  // Animación del logo grande (#erroCorbalan)
-  if (erroLogo) {
-    erroLogo.classList.toggle("special", scrollY > 50);
-  }
 });
-
 document.addEventListener("scroll", function () {
   const erroLogo = document.getElementById("erroCorbalan");
-
   if (!erroLogo) return;
 
   if (window.scrollY > 50) {
     erroLogo.classList.add("shrink-logo");
   } else {
     erroLogo.classList.remove("shrink-logo");
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const logo = document.querySelector("header .logo img");
+  if (logo && window.innerWidth <= 480) {
+    logo.style.display = "none"; // 🔥 lo mata apenas abre en celular
   }
 });
