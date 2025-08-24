@@ -661,6 +661,10 @@
 
 @media only screen and (max-width: 480px) {
 
+    html {
+  scrollbar-width: none;  /* quita el scrollbar pero mantiene el scroll */
+}
+
   #erroCorbalan {
     background-color: #780e18;
     position: relative;
@@ -685,6 +689,7 @@ header {
     width: 100%;
     z-index: 1000;
     transition: all 0.3s ease-in-out;
+    overflow: hidden;
 }
 
 header nav{
