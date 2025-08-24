@@ -517,16 +517,21 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("scroll", function () {
   const header = document.querySelector("header");
   const logo = document.querySelector("header .logo img");
+  const erroLogo = document.getElementById("erroCorbalan");
   const scrollY = window.scrollY;
-
   const isMobile = window.innerWidth <= 480;
 
-  if (scrollY > 80) {
-    header.style.padding = "5px 20px";
-    if (logo && isMobile) logo.style.display = "none";
-  } else {
-    header.style.padding = "15px 20px";
-    if (logo) logo.style.display = "block";
+  // Header padding
+  header.style.padding = scrollY > 80 ? "5px 20px" : "15px 20px";
+
+  // Mostrar u ocultar logo SOLO en mobile
+  if (logo) {
+    logo.style.display = isMobile && scrollY > 80 ? "none" : "block";
+  }
+
+  // Animación del logo grande (#erroCorbalan)
+  if (erroLogo) {
+    erroLogo.classList.toggle("special", scrollY > 50);
   }
 });
 
