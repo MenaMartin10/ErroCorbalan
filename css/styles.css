@@ -665,6 +665,7 @@
 
     html {
   scrollbar-width: none;  /* quita el scrollbar pero mantiene el scroll */
+   overflow-x: hidden;
 }
 
 #erroCorbalan {
@@ -685,6 +686,7 @@
 #erroCorbalan.shrink-logo {
   transform: translateX(-50%) scale(0.85); /* ✅ achicar */
   box-shadow: none;
+  width: 200px;
 }
 
 
@@ -729,20 +731,19 @@ header nav {
     top: 50px;
 }
 
-  .grid {
-        flex-direction: column; /* apilar filas */
-        padding: 20px 10px 50px 10px;
-        gap: 15px;
-        justify-self: center;
-    }
+   .grid {
+    display: flex;
+    flex-direction: column;   /* apila en columna */
+    align-items: center;      /* ✅ centra horizontalmente cada item */
+    justify-content: center;  /* ✅ centra verticalmente si hay espacio */
+    gap: 15px;
+  }
 
     .grid .property {
-        flex: 1 1 100%;   /* cada caja ocupa toda la fila */
-        max-width: 100%;
-        padding: 20px;
-        font-size: x-small;
-        text-align: center;
-    }
+    max-width: 400px; /* no se estira demasiado */
+    text-align: center;
+  }
+
 
     #familiar{
         width: 80%;
@@ -795,12 +796,23 @@ header nav {
     display: grid;
     gap: 20px; /* espacio entre los hijos */
     margin: 0;
+    margin-bottom: 100px;
 }
 
-.form-contacto {
-    justify-self: center;
-    margin-top: 100px;
-}
+  .form-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* ✅ centra horizontal */
+    justify-content: center;
+    margin: 20px auto;     /* ✅ centrado en celular */
+    width: 90%;
+    max-width: 400px;
+    padding: 0px;
+  }
+
+   .form-contacto form {
+    width: 70%;
+  }
 
 #copy{
     font-size: xx-small;
