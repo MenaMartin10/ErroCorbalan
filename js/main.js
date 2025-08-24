@@ -519,7 +519,6 @@ document.addEventListener("scroll", function () {
   const logo = document.querySelector("header .logo img");
   const scrollY = window.scrollY;
 
-  // Solo ocultar el logo si el ancho de la pantalla es menor a 480px
   const isMobile = window.innerWidth <= 480;
 
   if (scrollY > 80) {
